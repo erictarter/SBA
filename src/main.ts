@@ -9,8 +9,9 @@ import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faFootball } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUser)
+library.add(faUser, faFootball)
 
 const app = createApp(App)
 

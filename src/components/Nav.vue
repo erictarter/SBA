@@ -2,7 +2,7 @@
   import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-  <div class="nav">
+  <div>
     <nav>
       <div class="navbar bg-base-100">
         <div class="navbar-start">
@@ -10,7 +10,7 @@
             <label tabindex="0" class="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                class="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -24,35 +24,39 @@
             <ul
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Homepage</a></li>
-              <li><a>Portfolio</a></li>
-              <li><a>About</a></li>
+              <li>
+                <RouterLink to="/">Home</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/account">Account</RouterLink>
+              </li>
             </ul>
           </div>
         </div>
         <div class="navbar-center">
-          <a class="btn btn-ghost normal-case text-xl">SBA</a>
+          <RouterLink class="btn btn-ghost normal-case text-xl" to="/"
+            >SBA</RouterLink
+          >
         </div>
         <div class="navbar-end">
-          <button class="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
+          <!-- if logged in, go to account else open login/signup modal -->
+          <RouterLink to="/account">
+            <button class="btn btn-ghost btn-circle text-lg">
+              <font-awesome-icon :icon="['fas', 'user']" />
+            </button>
+            <!-- if signed in show below -->
+            <div class="avatar placeholder">
+              <div
+                class="bg-neutral-focus text-neutral-content rounded-full w-8">
+                <span class="text-lg">ET</span>
+              </div>
+            </div>
+          </RouterLink>
           <button class="btn btn-ghost btn-circle">
             <div class="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                class="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
