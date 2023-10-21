@@ -8,10 +8,29 @@ import App from './App.vue'
 import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faFootball } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUser,
+  faFootball,
+  faBaseball,
+  faBasketball,
+  faFutbol,
+  faHockeyPuck,
+  faMitten,
+  faHorse,
+  faFlagCheckered
+} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUser, faFootball)
+library.add(
+  faUser,
+  faFootball,
+  faBasketball,
+  faBaseball,
+  faFutbol,
+  faHockeyPuck,
+  faMitten,
+  faHorse,
+  faFlagCheckered
+)
 
 const app = createApp(App)
 

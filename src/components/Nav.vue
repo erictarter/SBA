@@ -1,5 +1,15 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from 'vue-router'
+  const props = defineProps<{
+    sports: Array<{ icon: string; route: string }>
+  }>()
+  const basketball = props.sports.filter((i) => i.icon === 'basketball')
+  const football = props.sports.filter((i) => i.icon === 'football')
+  const baseball = props.sports.filter((i) => i.icon === 'baseball')
+  const soccer = props.sports.filter((i) => i.icon === 'futbol')
+  const hockey = props.sports.filter((i) => i.icon === 'hockey-puck')
+  const racing = props.sports.filter((i) => i.icon === 'flag-checkered')
+  const mma = props.sports.filter((i) => i.icon === 'mitten')
 </script>
 <template>
   <div>
@@ -21,14 +31,115 @@
                   d="M4 6h16M4 12h16M4 18h7" />
               </svg>
             </label>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <ul class="menu bg-base-200 w-56 dropdown-content z-50 rounded-box">
               <li>
-                <RouterLink to="/">Home</RouterLink>
+                <RouterLink class="" to="/">Home</RouterLink>
               </li>
               <li>
-                <RouterLink to="/account">Account</RouterLink>
+                <details>
+                  <summary>Events</summary>
+                  <ul>
+                    <li>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-football']" />Football
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in football" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-basketball']" />Basketball
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in basketball" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-futbol']" />Soccer
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in soccer" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-baseball']" />Baseball
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in baseball" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-flag-checkered']" />Racing
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in racing" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-hockey-puck']" />Hockey
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in hockey" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                      <details>
+                        <summary>
+                          <font-awesome-icon
+                            :icon="['fas', 'fa-basketball']" />MMA
+                        </summary>
+                        <ul>
+                          <li v-for="(i, index) in mma" :key="index">
+                            <RouterLink :to="'/events/' + i.route">
+                              {{ i.league }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <RouterLink class="" to="/settings">Settings</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="" to="/settings">Profile</RouterLink>
               </li>
             </ul>
           </div>
@@ -39,20 +150,9 @@
           >
         </div>
         <div class="navbar-end">
-          <!-- if logged in, go to account else open login/signup modal -->
-          <RouterLink to="/account">
-            <button class="btn btn-ghost btn-circle text-lg">
-              <font-awesome-icon :icon="['fas', 'user']" />
-            </button>
-            <!-- if signed in show below -->
-            <div class="avatar placeholder">
-              <div
-                class="bg-neutral-focus text-neutral-content rounded-full w-8">
-                <span class="text-lg">ET</span>
-              </div>
-            </div>
-          </RouterLink>
-          <button class="btn btn-ghost btn-circle">
+          <!-- show below if signed in.. -->
+
+          <!-- <button class="btn btn-ghost btn-circle">
             <div class="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +169,17 @@
               <span class="badge badge-xs badge-primary indicator-item"></span>
             </div>
           </button>
+          <RouterLink to="/account">
+            <button class="btn btn-ghost btn-circle text-lg">
+              <div class="avatar placeholder">
+                <div
+                  class="bg-neutral-focus text-neutral-content rounded-full w-8">
+                  <span class="text-lg">ET</span>
+                </div>
+              </div>
+            </button>
+          </RouterLink> -->
+          <button class="btn btn-active btn-primary">Log in</button>
         </div>
       </div>
 

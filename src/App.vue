@@ -2,50 +2,60 @@
   import { RouterLink, RouterView } from 'vue-router'
   import { useSettings } from './stores/settings.ts'
   import Nav from './components/Nav.vue'
-  import SportNav from './components/SportNav.vue'
+  import SportNavMobile from './components/SportNavMobile.vue'
 
   const store = useSettings()
 
   const sports = [
     {
       icon: 'football',
-      route: 'football'
+      route: 'football',
+      league: 'NFL'
+    },
+    {
+      icon: 'basketball',
+      route: 'basketball',
+      league: 'NBA'
+    },
+    {
+      icon: 'futbol',
+      route: 'soccer-premier',
+      league: 'Premier League'
+    },
+    {
+      icon: 'futbol',
+      route: 'soccer-mls',
+      league: 'MLS'
     },
     {
       icon: 'football',
-      route: 'football'
+      route: 'college-football',
+      league: 'NCAA Football'
     },
     {
-      icon: 'football',
-      route: 'football'
+      icon: 'baseball',
+      route: 'baseball',
+      league: 'MLB'
     },
     {
-      icon: 'football',
-      route: 'football'
+      icon: 'hockey-puck',
+      route: 'hockey',
+      league: 'NHL'
     },
     {
-      icon: 'football',
-      route: 'football'
+      icon: 'basketball',
+      route: 'college-basketball',
+      league: 'NCAA Basketball'
     },
     {
-      icon: 'football',
-      route: 'football'
+      icon: 'flag-checkered',
+      route: 'racing',
+      league: 'F1'
     },
     {
-      icon: 'football',
-      route: 'football'
-    },
-    {
-      icon: 'football',
-      route: 'football'
-    },
-    {
-      icon: 'football',
-      route: 'football'
-    },
-    {
-      icon: 'football',
-      route: 'football'
+      icon: 'mitten',
+      route: 'ufc',
+      league: 'UFC'
     }
   ]
 
@@ -60,8 +70,8 @@
   <button @click="toggleToggler">Toggle</button> -->
   <div>
     <div class="sticky top-0">
-      <Nav />
-      <SportNav :sports="sports" />
+      <Nav :sports="sports" />
+      <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
     <div class="app-container">
       <RouterView />
