@@ -1,8 +1,14 @@
 <script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
+  import { ref, watch } from 'vue'
+  import { RouterLink, useRoute } from 'vue-router'
+  import { useStore } from '../stores/app.ts'
   const props = defineProps<{
     sports: Array<{ icon: string; route: string }>
   }>()
+
+  const store = useStore()
+  const route = useRoute()
+
   const basketball = props.sports.filter((i) => i.icon === 'basketball')
   const football = props.sports.filter((i) => i.icon === 'football')
   const baseball = props.sports.filter((i) => i.icon === 'baseball')
@@ -10,6 +16,26 @@
   const hockey = props.sports.filter((i) => i.icon === 'hockey-puck')
   const racing = props.sports.filter((i) => i.icon === 'flag-checkered')
   const mma = props.sports.filter((i) => i.icon === 'mitten')
+
+  const isDropdownVisible = ref(false)
+
+  const closeDropdown = () => {
+    isDropdownVisible.value = false
+  }
+  const showDropdown = () => {
+    isDropdownVisible.value = true
+  }
+
+  const showBusy = () => {
+    store.showBusy()
+  }
+
+  watch(
+    () => route.fullPath,
+    () => {
+      closeDropdown()
+    }
+  )
 </script>
 <template>
   <div>
@@ -17,7 +43,10 @@
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost btn-circle">
+            <label
+              @click="showDropdown"
+              tabindex="0"
+              class="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8"
@@ -31,7 +60,9 @@
                   d="M4 6h16M4 12h16M4 18h7" />
               </svg>
             </label>
-            <ul class="menu bg-base-200 w-56 dropdown-content z-50 rounded-box">
+            <ul
+              v-show="isDropdownVisible"
+              class="menu bg-base-200 w-56 dropdown-content z-50 rounded-box">
               <li>
                 <RouterLink class="" to="/">Home</RouterLink>
               </li>
@@ -179,12 +210,11 @@
               </div>
             </button>
           </RouterLink> -->
-          <button class="btn btn-active btn-primary">Log in</button>
+          <button @click="showBusy" class="btn btn-active btn-primary">
+            Log in
+          </button>
         </div>
       </div>
-
-      <!-- <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink> -->
     </nav>
   </div>
 </template>

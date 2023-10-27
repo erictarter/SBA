@@ -1,10 +1,12 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from 'vue-router'
-  import { useSettings } from './stores/settings.ts'
+  import { onMounted } from 'vue';
+  import { useStore } from './stores/app.ts'
+  import Loading from './components/Loading.vue'
   import Nav from './components/Nav.vue'
   import SportNavMobile from './components/SportNavMobile.vue'
 
-  const store = useSettings()
+  const store = useStore()
 
   const sports = [
     {
@@ -59,9 +61,9 @@
     }
   ]
 
-  const toggleToggler = () => {
-    store.toggleToggler()
-  }
+  // const toggleToggler = () => {
+  //   store.toggleToggler()
+  // }
 </script>
 
 <template>
@@ -69,6 +71,9 @@
   <!-- <p>Is Toggled: {{ store.isToggled }}</p>
   <button @click="toggleToggler">Toggle</button> -->
   <div>
+    <transition name="fade" appear>
+      <Loading v-if="store.busy" />
+    </transition>
     <div class="sticky top-0">
       <Nav :sports="sports" />
       <SportNavMobile class="md:hidden" :sports="sports" />
@@ -79,4 +84,29 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+</style>
+
+<!-- next steps..
+- close nav menu when selecting
+- create some sort of banner
+- create events list
+- create event page
+- add busy experience
+- create betslip
+- create login experience
+- creating event ids
+- generate list of events and categorize
+- create footer
+- create mobile controls for app experience
+- work on colors
+- use store for busy, logged in, preferences.. bets(?)
+-->
