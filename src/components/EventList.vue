@@ -1,10 +1,14 @@
+<script setup lang="ts">
+  const props = defineProps<{
+    title: string
+    data: any
+  }>()
+</script>
 <template>
-  <div class="loading-view flex justify-center">
-    <span class="loading loading-ring loading-lg"></span>
+  <div class="event-list">
+    <h1>{{ title }}</h1>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 <style scoped lang="scss">
   .loading-view {
     z-index: 1000;

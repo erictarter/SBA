@@ -70,7 +70,7 @@
   <!-- store example use -->
   <!-- <p>Is Toggled: {{ store.isToggled }}</p>
   <button @click="toggleToggler">Toggle</button> -->
-  <div>
+  <div class="browser">
     <transition name="fade" appear>
       <Loading v-if="store.busy" />
     </transition>
@@ -78,8 +78,10 @@
       <Nav :sports="sports" />
       <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
-    <div class="app-container">
+    <div class="banner-container">
       <Banner />
+    </div>
+    <div class="app-container">
       <RouterView />
     </div>
   </div>
@@ -93,6 +95,9 @@
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
+  }
+  .browser {
+    background-color: #333;
   }
 </style>
 

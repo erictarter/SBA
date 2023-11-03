@@ -38,7 +38,7 @@
     },
     {
       backgroundImage:
-        'https://images.unsplash.com/photo-1563299796-b729d0af54a5?auto=format&fit=crop&q=80&w=2650&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1569705460033-cfaa4bf9f822?auto=format&fit=crop&q=80&w=2674&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       icon: 'boost',
       title: 'Seasonal Boost',
       url: '/events'
@@ -46,7 +46,7 @@
   ]
 </script>
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center banner">
     <ul
       class="scroll-snap scrollbar-container flex-nowrap menu-horizontal overflow-x-auto">
       <BannerItems :banners="banners" />
@@ -54,6 +54,10 @@
   </div>
 </template>
 <style scoped lang="scss">
+  .banner {
+    width: 100vw;
+    background-color: #333;
+  }
   .scroll-snap {
     scroll-snap-type: x mandatory;
     overflow-x: auto;
@@ -67,12 +71,13 @@
 
   .scrollbar-container::-webkit-scrollbar {
     width: 100%; /* Adjust the width as needed */
-    height: 10px;
+    height: 7px;
   }
   .scrollbar-container::-webkit-scrollbar-thumb {
-    background: #b8d5c5; /* Adjust the color as needed */
+    background: rgb(197, 197, 197); /* Hide the track */
+    border: 2px solid rgb(87, 83, 83);
   }
   .scrollbar-container::-webkit-scrollbar-track {
-    background: rgb(148, 148, 148); /* Hide the track */
+    background: rgb(87, 83, 83);
   }
 </style>
