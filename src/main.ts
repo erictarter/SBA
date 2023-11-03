@@ -17,7 +17,10 @@ import {
   faHockeyPuck,
   faMitten,
   faHorse,
-  faFlagCheckered
+  faFlagCheckered,
+  faBolt,
+  faMoneyBill1,
+  faTag
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -29,7 +32,10 @@ library.add(
   faHockeyPuck,
   faMitten,
   faHorse,
-  faFlagCheckered
+  faFlagCheckered,
+  faBolt,
+  faMoneyBill1,
+  faTag
 )
 
 const app = createApp(App)

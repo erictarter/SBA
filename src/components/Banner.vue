@@ -2,46 +2,53 @@
   import BannerItems from './BannerItems.vue'
   const banners = [
     {
-      backgroundImage: '',
-      sport: 'football',
+      backgroundImage:
+        'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'boost',
       title: 'Super Boost',
-      url: ''
+      url: '/events'
     },
     {
-      backgroundImage: '',
-      sport: 'basketball',
+      backgroundImage:
+        'https://plus.unsplash.com/premium_photo-1682309553075-c84ea8d9d49a?auto=format&fit=crop&q=80&w=2712&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'boost',
+      title: 'Boost',
+      url: '/events'
+    },
+    {
+      backgroundImage:
+        'https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'discount',
+      title: '25% ',
+      url: '/events'
+    },
+    {
+      backgroundImage:
+        'https://plus.unsplash.com/premium_photo-1682309699199-4bf1e94b6e52?auto=format&fit=crop&q=80&w=2712&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'free',
       title: 'Free Bonus',
-      url: ''
+      url: '/events'
     },
     {
-      backgroundImage: '',
-      sport: 'football',
-      title: '25% Boost',
-      url: ''
+      backgroundImage:
+        'https://plus.unsplash.com/premium_photo-1683141081466-29239d3b4838?auto=format&fit=crop&q=80&w=2677&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'free',
+      title: 'Free Play',
+      url: '/events'
     },
     {
-      backgroundImage: '',
-      sport: 'football',
-      title: 'Free Bonus',
-      url: ''
-    },
-    {
-      backgroundImage: '',
-      sport: 'mma',
-      title: 'Free Bonus',
-      url: ''
-    },
-    {
-      backgroundImage: '',
-      sport: 'soccer',
-      title: '25% Boost',
-      url: ''
+      backgroundImage:
+        'https://images.unsplash.com/photo-1563299796-b729d0af54a5?auto=format&fit=crop&q=80&w=2650&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      icon: 'boost',
+      title: 'Seasonal Boost',
+      url: '/events'
     }
   ]
 </script>
 <template>
   <div class="flex justify-center">
-    <ul class="scroll-snap flex-nowrap menu-horizontal overflow-x-auto">
+    <ul
+      class="scroll-snap scrollbar-container flex-nowrap menu-horizontal overflow-x-auto">
       <BannerItems :banners="banners" />
     </ul>
   </div>
@@ -52,5 +59,20 @@
     overflow-x: auto;
     white-space: nowrap;
     padding: 0.5em;
+  }
+
+  ul {
+    background-color: rgba(44, 44, 44);
+  }
+
+  .scrollbar-container::-webkit-scrollbar {
+    width: 100%; /* Adjust the width as needed */
+    height: 10px;
+  }
+  .scrollbar-container::-webkit-scrollbar-thumb {
+    background: #b8d5c5; /* Adjust the color as needed */
+  }
+  .scrollbar-container::-webkit-scrollbar-track {
+    background: rgb(148, 148, 148); /* Hide the track */
   }
 </style>
