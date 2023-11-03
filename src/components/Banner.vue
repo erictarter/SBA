@@ -3,37 +3,37 @@
   const banners = [
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'football',
       title: 'Super Boost',
       url: ''
     },
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'basketball',
       title: 'Free Bonus',
       url: ''
     },
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'football',
       title: '25% Boost',
       url: ''
     },
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'football',
       title: 'Free Bonus',
       url: ''
     },
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'mma',
       title: 'Free Bonus',
       url: ''
     },
     {
       backgroundImage: '',
-      icon: 'icon',
+      sport: 'soccer',
       title: '25% Boost',
       url: ''
     }

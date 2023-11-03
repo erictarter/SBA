@@ -2,7 +2,7 @@
   import BannerItem from './BannerItem.vue'
   const props = defineProps<{
     banners: Array<{
-      icon: string
+      sport: string
       backgroundImage: string
       title: string
       url: string
@@ -14,5 +14,4 @@
     <BannerItem :item="item" />
   </li>
 </template>
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
