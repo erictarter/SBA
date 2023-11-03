@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
-  import { onMounted } from 'vue';
+  import { RouterView } from 'vue-router'
   import { useStore } from './stores/app.ts'
   import Loading from './components/Loading.vue'
   import Nav from './components/Nav.vue'
   import SportNavMobile from './components/SportNavMobile.vue'
+  import Banner from './components/Banner.vue'
 
   const store = useStore()
 
@@ -79,6 +79,7 @@
       <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
     <div class="app-container">
+      <Banner />
       <RouterView />
     </div>
   </div>
@@ -96,11 +97,9 @@
 </style>
 
 <!-- next steps..
-- close nav menu when selecting
 - create some sort of banner
 - create events list
 - create event page
-- add busy experience
 - create betslip
 - create login experience
 - creating event ids
