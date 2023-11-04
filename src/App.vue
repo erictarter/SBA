@@ -78,11 +78,9 @@
       <Nav :sports="sports" />
       <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
-    <div class="banner-container">
-      <Banner />
-    </div>
     <div class="app-container">
-      <RouterView />
+      <Banner />
+      <RouterView class="mt-8 p-5" />
     </div>
   </div>
 </template>

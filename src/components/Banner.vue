@@ -55,7 +55,6 @@
 </template>
 <style scoped lang="scss">
   .banner {
-    width: 100vw;
     background-color: #333;
   }
   .scroll-snap {

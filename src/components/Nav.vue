@@ -230,6 +230,16 @@
   .dropdown-content {
     background-color: #333;
     border: 3px solid rgb(135, 201, 179);
+    color: white;
+
+    a:hover {
+      color: white;
+      background-color: rgb(176, 152, 205);
+    }
+    summary:hover {
+      color: white;
+      background-color: rgb(176, 152, 205);
+    }
   }
   .login-btn {
     background-color: rgb(176, 152, 205);

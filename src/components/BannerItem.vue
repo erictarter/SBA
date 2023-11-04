@@ -56,7 +56,7 @@
   }
 
   .overlay {
-    background-color: rgba(27, 27, 27, 0.4);
+    background-color: rgba(27, 27, 27, 0.65);
     width: 100%;
     height: 100%;
     transition: 0.2s ease all;
