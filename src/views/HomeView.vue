@@ -9,7 +9,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -18,7 +19,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -27,7 +29,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -36,7 +39,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -45,7 +49,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -54,7 +59,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -63,7 +69,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -72,7 +79,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     },
     {
       eventType: 'team',
@@ -81,7 +89,8 @@
       home: { city: 'LA', name: 'Lakers' },
       moneyLine: { away: '135', home: '-115' },
       spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' }
+      total: { over: '213', under: '213' },
+      time: '4:30'
     }
   ]
 </script>
