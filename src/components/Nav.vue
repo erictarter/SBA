@@ -40,7 +40,7 @@
 <template>
   <div>
     <nav>
-      <div class="navbar">
+      <div class="navbar border-solid border-b-2 border-base-content base-100">
         <div class="navbar-start">
           <div class="dropdown">
             <label
@@ -62,7 +62,7 @@
             </label>
             <ul
               v-show="isDropdownVisible"
-              class="menu w-56 dropdown-content z-50 rounded-box">
+              class="menu w-56 dropdown-content z-50 rounded-box bg-base-100 border-solid border-2 border-secondary">
               <li>
                 <RouterLink class="" to="/">Home</RouterLink>
               </li>
@@ -212,7 +212,7 @@
           </RouterLink> -->
           <button
             @click="showBusy"
-            class="btn btn-active btn-primary login-btn">
+            class="btn btn-active btn-secondary login-btn text-base-content">
             Log in
           </button>
         </div>
@@ -220,30 +220,4 @@
     </nav>
   </div>
 </template>
-<style scoped lang="scss">
-  .navbar {
-    background-color: #333;
-    color: white;
-    border-bottom: 2px solid rgb(175, 187, 183);
-  }
-
-  .dropdown-content {
-    background-color: #333;
-    border: 3px solid rgb(135, 201, 179);
-    color: white;
-
-    a:hover {
-      color: white;
-      background-color: rgb(176, 152, 205);
-    }
-    summary:hover {
-      color: white;
-      background-color: rgb(176, 152, 205);
-    }
-  }
-  .login-btn {
-    background-color: rgb(176, 152, 205);
-    color: white;
-    border-color: transparent;
-  }
-</style>
+<style scoped lang="scss"></style>

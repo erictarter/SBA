@@ -12,42 +12,41 @@
       <table class="text-lg">
         <tr>
           <th></th>
-          <th>Spread</th>
+          <th class="text-purple">Spread</th>
           <th>Total</th>
           <th>Moneyline</th>
         </tr>
         <tbody>
           <tr v-for="event in data">
-            <div class="teams text-left my-2">
+            <div
+              class="teams text-left my-2 p-3 bg-neutral-focus hover:bg-secondary">
               <RouterLink to="/event">
-                <th class="">
-                  <div>{{ event.away.city }}</div>
-                  <div class="my-1 text-left">{{ event.home.city }}</div>
-                  <div class="mt-2 text-left">{{ event.time }}</div>
-                </th>
+                <div>{{ event.away.city }}</div>
+                <div class="my-1 text-left">{{ event.home.city }}</div>
+                <div class="mt-2 text-left">{{ event.time }}</div>
               </RouterLink>
             </div>
             <td>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.spread.away }}
               </div>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.spread.home }}
               </div>
             </td>
             <td>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.total.over }}
               </div>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.total.under }}
               </div>
             </td>
             <td>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.moneyLine.away }}
               </div>
-              <div>
+              <div class="bg-neutral hover:bg-secondary">
                 {{ event.moneyLine.home }}
               </div>
             </td>
@@ -66,7 +65,6 @@
     padding: 0.5rem;
     text-align: center;
     div {
-      background-color: rgba(176, 152, 205, 0.3);
       margin: 0.25rem;
       border-radius: 4px;
       padding: 0.5rem;
@@ -74,18 +72,18 @@
       transition: 0.2s ease all;
     }
     div:hover {
-      background-color: rgb(176, 152, 205);
       transition: 0.2s ease all;
     }
   }
 
   tbody {
     .teams {
-      background-color: rgb(62, 59, 65);
       border-radius: 4px;
+      transition: 0.2s ease all;
+      cursor: pointer;
     }
     .teams:hover {
-      background-color: rgb(176, 152, 205);
+      transition: 0.2s ease all;
     }
     tr {
       border-bottom: 1px solid rgb(176, 152, 205);

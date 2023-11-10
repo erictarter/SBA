@@ -70,7 +70,7 @@
   <!-- store example use -->
   <!-- <p>Is Toggled: {{ store.isToggled }}</p>
   <button @click="toggleToggler">Toggle</button> -->
-  <div class="browser">
+  <div data-theme="dracula" class="bg-base-200 text-base-content">
     <transition name="fade" appear>
       <Loading v-if="store.busy" />
     </transition>
@@ -93,9 +93,6 @@
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
-  }
-  .browser {
-    background-color: #333;
   }
 </style>
 

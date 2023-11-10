@@ -29,10 +29,10 @@
     }"
     :to="'/events' + item.url">
     <div class="overlay flex items-center justify-center p-2">
-      <div class="text-2xl white">
+      <div class="text-2xl">
         <font-awesome-icon :icon="sportIcon" />
       </div>
-      <div class="text-lg white px-2">{{ item.title }}</div>
+      <div class="text-lg px-2">{{ item.title }}</div>
     </div>
   </RouterLink>
 </template>
@@ -68,9 +68,5 @@
   }
   .content {
     position: absolute;
-  }
-
-  .white {
-    color: white;
   }
 </style>

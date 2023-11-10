@@ -48,24 +48,17 @@
 <template>
   <div class="flex justify-center banner">
     <ul
-      class="scroll-snap scrollbar-container flex-nowrap menu-horizontal overflow-x-auto">
+      class="scroll-snap scrollbar-container flex-nowrap menu-horizontal overflow-x-auto bg-neutral-focus">
       <BannerItems :banners="banners" />
     </ul>
   </div>
 </template>
 <style scoped lang="scss">
-  .banner {
-    background-color: #333;
-  }
   .scroll-snap {
     scroll-snap-type: x mandatory;
     overflow-x: auto;
     white-space: nowrap;
     padding: 0.5em;
-  }
-
-  ul {
-    background-color: rgba(44, 44, 44);
   }
 
   .scrollbar-container::-webkit-scrollbar {
