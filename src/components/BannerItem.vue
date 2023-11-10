@@ -40,7 +40,6 @@
   .banner-item {
     width: 15.5em;
     height: 8.75em;
-    background-color: rgb(178, 205, 205);
     border-radius: 4px;
     scroll-snap-align: center;
   }
@@ -49,9 +48,15 @@
     .banner-item {
       width: 18.5em;
       height: 11.75em;
-      background-color: rgb(178, 205, 205);
       border-radius: 4px;
       scroll-snap-align: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .banner-item {
+      width: 24.5em;
+      height: 16.75em;
     }
   }
 
@@ -60,6 +65,7 @@
     width: 100%;
     height: 100%;
     transition: 0.2s ease all;
+    border-radius: 4px;
   }
 
   .overlay:hover {

@@ -6,9 +6,12 @@
 </script>
 <template>
   <div class="flex justify-center">
-    <ul class="menu flex-nowrap menu-horizontal overflow-x-auto">
+    <ul
+      class="menu flex-nowrap border-b-2 border-secondary menu-horizontal overflow-x-auto bg-neutral-focus">
       <li class="text-md mx-1.5" v-for="(sport, index) in sports" :key="index">
-        <RouterLink :to="'/events/' + sport.route">
+        <RouterLink
+          class="border-2 text-secondary border-secondary bg-base-200"
+          :to="'/events/' + sport.route">
           <font-awesome-icon :icon="['fas', sport.icon]" />
           {{ sport.league }}
         </RouterLink>
@@ -20,11 +23,5 @@
   .sport-nav {
     max-width: 1280px;
     margin: 0 auto;
-  }
-
-  .menu {
-    background-color: rgb(38, 37, 40);
-    color: white;
-    border-bottom: 2px solid rgb(175, 187, 183);
   }
 </style>

@@ -40,13 +40,13 @@
 <template>
   <div>
     <nav>
-      <div class="navbar border-solid border-b-2 border-base-content base-100">
+      <div class="navbar border-solid border-b-2 border-secondary bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
             <label
               @click="showDropdown"
               tabindex="0"
-              class="btn btn-ghost btn-circle">
+              class="btn btn-ghost btn-circle text-secondary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8"
