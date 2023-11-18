@@ -4,7 +4,6 @@
   import Loading from './components/Loading.vue'
   import Nav from './components/Nav.vue'
   import SportNavMobile from './components/SportNavMobile.vue'
-  import Banner from './components/Banner.vue'
   import Footer from './components/Footer.vue'
 
   const store = useStore()
@@ -80,7 +79,6 @@
       <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
     <div class="app-container min-h-screen">
-      <Banner />
       <RouterView class="mt-8 p-5" />
     </div>
     <Footer />

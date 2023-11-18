@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import EventList from '../components/EventList.vue'
+  import Banner from '../components/Banner.vue'
 
   const homeData = [
     {
@@ -97,6 +98,7 @@
 
 <template>
   <div>
+    <Banner />
     <EventList title="Todays Events" :data="homeData" />
   </div>
 </template>
