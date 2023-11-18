@@ -1,12 +1,179 @@
 [
   {
-    "id": 1,
-    "name": "Event 1",
-    "description": "Description of Event 1"
+    "id": 72893,
+    "home": "home team",
+    "away": "away team",
+    "data": "date & time",
+    "bets": [
+      {
+        "type": "game",
+        "title": "game",
+        "lines": [
+          {
+            "spread": {
+              "home": -8,
+              "away": 8
+            },
+            "total": {
+              "home": 48,
+              "away": 48
+            },
+            "moneyline": {
+              "home": -445,
+              "away": 350
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "TD scorer",
+        "lines": [
+          {
+            "first": {
+              "home": 450
+            },
+            "last": {
+              "home": 550
+            },
+            "anytime": {
+              "home": -140
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "Yards Recieving",
+        "lines": [
+          {
+            "over": {
+              "home": 65
+            },
+            "under": {
+              "home": 65
+            }
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": 2,
-    "name": "Event 2",
-    "description": "Description of Event 2"
+    "id": 72893,
+    "home": "home team",
+    "away": "away team",
+    "data": "date & time",
+    "bets": [
+      {
+        "type": "game",
+        "title": "game",
+        "lines": [
+          {
+            "spread": {
+              "home": -8,
+              "away": 8
+            },
+            "total": {
+              "home": 48,
+              "away": 48
+            },
+            "moneyline": {
+              "home": -445,
+              "away": 350
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "TD scorer",
+        "lines": [
+          {
+            "first": {
+              "home": 450
+            },
+            "last": {
+              "home": 550
+            },
+            "anytime": {
+              "home": -140
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "Yards Recieving",
+        "lines": [
+          {
+            "over": {
+              "home": 65
+            },
+            "under": {
+              "home": 65
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 72893,
+    "home": "home team",
+    "away": "away team",
+    "data": "date & time",
+    "bets": [
+      {
+        "type": "game",
+        "title": "game",
+        "lines": [
+          {
+            "spread": {
+              "home": -8,
+              "away": 8
+            },
+            "total": {
+              "home": 48,
+              "away": 48
+            },
+            "moneyline": {
+              "home": -445,
+              "away": 350
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "TD scorer",
+        "lines": [
+          {
+            "first": {
+              "home": 450
+            },
+            "last": {
+              "home": 550
+            },
+            "anytime": {
+              "home": -140
+            }
+          }
+        ]
+      },
+      {
+        "type": "prop",
+        "title": "Yards Recieving",
+        "lines": [
+          {
+            "over": {
+              "home": 65
+            },
+            "under": {
+              "home": 65
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

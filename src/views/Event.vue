@@ -1,12 +1,13 @@
 <template>
   <div>
     <h2>Dummy Data</h2>
+    <!-- add more quick bet type.. -->
     {{ fetchData }}
   </div>
 </template>
 
 <script setup lang="ts">
-  import { defineProps, ref, onMounted } from 'vue'
+  import { ref, onMounted } from 'vue'
   const props = defineProps<{
     data: Array<{ id: number; name: string; description: string }>
   }>()
@@ -16,7 +17,7 @@
 
   onMounted(async () => {
     try {
-      const response = await fetch('../../public/events.json')
+      const response = await fetch('/events.json')
       fetchData.value = await response.json()
     } catch (error) {
       console.error('Error fetching data:', error)
