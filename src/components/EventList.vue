@@ -30,31 +30,31 @@
             </div>
             <td class="p-1 ps-3 text-center">
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral px-3 m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.spread.away }}
               </div>
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral m-1 px-3 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.spread.home }}
               </div>
             </td>
             <td class="p-1 text-center">
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral m-1 px-3 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.total.over }}
               </div>
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral m-1 px-3 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.total.under }}
               </div>
             </td>
             <td class="p-1 text-center">
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral m-1 p-1 px-3 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.moneyLine.away }}
               </div>
               <div
-                class="bg-neutral m-1 p-1 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
+                class="bg-neutral m-1 p-1 px-3 transitions duration-150 ease-out rounded-md cursor-pointer hover:bg-secondary ease-in">
                 {{ event.moneyLine.home }}
               </div>
             </td>

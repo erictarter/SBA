@@ -1,105 +1,24 @@
 <script setup lang="ts">
+  import { ref, onMounted } from 'vue'
   import EventList from '../components/EventList.vue'
   import Banner from '../components/Banner.vue'
 
-  const homeData = [
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
-    },
-    {
-      eventType: 'team',
-      eventId: '12344321',
-      away: { city: 'Boston', name: 'Celtics' },
-      home: { city: 'LA', name: 'Lakers' },
-      moneyLine: { away: '135', home: '-115' },
-      spread: { away: '4', home: '-4' },
-      total: { over: '213', under: '213' },
-      time: '4:30'
+  const dataHome = ref([])
+
+  onMounted(async () => {
+    try {
+      const response = await fetch('/home.json')
+      dataHome.value = await response.json()
+    } catch (error) {
+      console.error('Error fetching data:', error)
     }
-  ]
+  })
 </script>
 
 <template>
   <div>
     <Banner />
-    <EventList title="Todays Events" :data="homeData" />
+    <EventList title="Todays Events" :data="dataHome[0]" />
   </div>
 </template>
 

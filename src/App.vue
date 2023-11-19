@@ -79,7 +79,7 @@
       <SportNavMobile class="md:hidden" :sports="sports" />
     </div>
     <div class="app-container min-h-screen">
-      <RouterView class="mt-8 p-5" />
+      <RouterView class="mt-8 py-5 px-0 sm:px-5" />
     </div>
     <Footer />
   </div>
